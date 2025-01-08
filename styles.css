@@ -4,23 +4,25 @@
 }
 
 :root {
-    --raisin-black: hsla(274, 11%, 12%, 1);
-    --barn-red: hsla(10, 79%, 14%, 0.75);
-    --flame: hsla(19, 79%, 50%, 1);
-    --orange-peel: hsla(35, 94%, 55%, 1);
-    --light-orange-peel: hsla(16, 89%, 72%, 1);
-    --non-photo-blue: hsla(198, 94%, 81%, 1);
+    --raisin-black: #1F1B22;
+    --barn-red: hsla(11, 80%, 14%, 0.7);
+    --flame: #E75D23;
+    --atomic-tangerine: #F79A78;
+    --seashell: #FEF1EC;
+    --non-photo-blue: #A1E1FC;
 }
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    color: var(--raisin-black)
 }
 
 body {
     display: flex;
     flex-direction: row;
+    font-family: sans-serif;
 }
 
 #img-container {
@@ -29,12 +31,13 @@ body {
     background-image: url(background.jpg);
     background-size: cover;
     background-position: -50px;
+    position: relative;
 }
 
 #company-container {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     width: 100%;
     background-color: var(--barn-red);
@@ -44,17 +47,84 @@ body {
 #business-name {
     font-family: "Aladin", sans-serif;
     font-size: 5rem;
-    color: var(--light-orange-peel);
+    color: var(--atomic-tangerine);
     padding-top: 5px;
+    opacity: 1;
+}
+
+#logo {
+    margin-right: 2.5rem;
 }
 
 #img-ref {
     position: absolute;
     bottom: 0;
-    text-align: center;
-    color: var(--non-photo-blue);
+    right: 0;
+    padding: 0.25rem;
+    text-align: right;
+    font-size: 0.5rem;
+    background-color: var(--non-photo-blue);
+    opacity: 0.6;
 }
 
 #img-ref > a {
-    color: var(--non-photo-blue);
+    color: inherit;
+}
+
+#form-container {
+    display: flex;
+    flex-direction: column;
+    width: 65vw;
+    background: linear-gradient(white, var(--seashell))
+}
+
+#input-container {
+    display: flex;
+    flex-direction: row;
+    padding-left: 4rem;
+    flex-wrap: wrap;
+    box-shadow: 0 3px 5px 0 #aaa;
+    clip-path: inset(0 0 -20px 0);
+    width: 100%;
+    background-color: var(--seashell);
+}
+
+label, input {
+    display: block;
+}
+
+label {
+    margin: 1rem 2rem 1rem 0;
+}
+
+input {
+    font-size: 1.5rem;
+}
+
+input[type=submit] {
+    display: block;
+    font-size: 1.2rem;
+    background-color: var(--non-photo-blue);
+    border: none;
+    box-shadow: 3px 3px 5px 0 #aaa;
+    margin: calc(1.5rem + 20px) 2rem 1.5rem 4rem;
+    padding: 0.75rem 3rem;
+    border-radius: 10px;
+}
+
+#about-us {
+    margin: 4rem 4rem 1rem 4rem;
+    font-size: 1.5rem;
+}
+
+#about-us > p {
+    margin-bottom: 2rem;
+}
+
+#log-in {
+    margin: 1rem 0 0 4rem;
+}
+
+strong {
+    color: var(--flame)
 }

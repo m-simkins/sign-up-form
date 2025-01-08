@@ -18,7 +18,7 @@ This project is intended to give you a chance to flex some of the new items you�
 
 - [x] The design has a large background-image, so go find and download an image you want to use for that section. The one in the design can be found on unsplash.com, but feel free to select your own. Be sure to credit the creator of your image!
 
-- [ ] Pick an external font for the ‘logo’ section. We’ve used Norse Bold, but you can use any font you like.
+- [x] Pick an external font for the ‘logo’ section. We’ve used Norse Bold, but you can use any font you like.
 
 - [x] For the image-sidebar, we’ve used this Odin logo.
 
