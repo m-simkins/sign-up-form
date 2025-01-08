@@ -1,3 +1,17 @@
+@font-face {
+    font-family: "Aladin";
+    src: url(Aladin-Regular.ttf);
+}
+
+:root {
+    --raisin-black: hsla(274, 11%, 12%, 1);
+    --barn-red: hsla(10, 79%, 14%, 0.75);
+    --flame: hsla(19, 79%, 50%, 1);
+    --orange-peel: hsla(35, 94%, 55%, 1);
+    --light-orange-peel: hsla(16, 89%, 72%, 1);
+    --non-photo-blue: hsla(198, 94%, 81%, 1);
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -9,7 +23,38 @@ body {
     flex-direction: row;
 }
 
-#img-container > img {
+#img-container {
+    width: 35vw;
     height: 100vh;
+    background-image: url(background.jpg);
+    background-size: cover;
+    background-position: -50px;
+}
+
+#company-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    background-color: var(--barn-red);
+    margin-top: 25vh;
+}
+
+#business-name {
+    font-family: "Aladin", sans-serif;
+    font-size: 5rem;
+    color: var(--light-orange-peel);
+    padding-top: 5px;
+}
+
+#img-ref {
     position: absolute;
+    bottom: 0;
+    text-align: center;
+    color: var(--non-photo-blue);
+}
+
+#img-ref > a {
+    color: var(--non-photo-blue);
 }
