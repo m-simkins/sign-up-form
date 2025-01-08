@@ -8,8 +8,10 @@
     --barn-red: hsla(11, 80%, 14%, 0.7);
     --flame: #E75D23;
     --atomic-tangerine: #F79A78;
-    --seashell: #FEF1EC;
+    --champagne-pink: #FDE3D8;
     --non-photo-blue: #A1E1FC;
+    --shadow: 0 3px 5px 0 var(--barn-red);
+    --clip: inset(0 0 -10px 0);
 }
 
 * {
@@ -75,7 +77,7 @@ body {
     display: flex;
     flex-direction: column;
     width: 65vw;
-    background: linear-gradient(white, var(--seashell))
+    background: linear-gradient(white, var(--atomic-tangerine))
 }
 
 #input-container {
@@ -83,10 +85,10 @@ body {
     flex-direction: row;
     padding-left: 4rem;
     flex-wrap: wrap;
-    box-shadow: 0 3px 5px 0 #aaa;
-    clip-path: inset(0 0 -20px 0);
+    box-shadow: var(--shadow);
+    clip-path: var(--clip);
     width: 100%;
-    background-color: var(--seashell);
+    background-color: var(--champagne-pink);
 }
 
 label, input {
@@ -101,15 +103,34 @@ input {
     font-size: 1.5rem;
 }
 
+input:focus {
+    box-shadow: var(--shadow);
+    clip: var(--clip);
+}
+
+input[type=password]:invalid {
+    border: 2px solid red;
+    border-radius: 3px;
+}
+
+input[type=password]:valid {
+    border: 2px solid green;
+    border-radius: 3px;
+}
+
 input[type=submit] {
     display: block;
     font-size: 1.2rem;
     background-color: var(--non-photo-blue);
     border: none;
-    box-shadow: 3px 3px 5px 0 #aaa;
+    box-shadow: var(--shadow);
     margin: calc(1.5rem + 20px) 2rem 1.5rem 4rem;
     padding: 0.75rem 3rem;
     border-radius: 10px;
+}
+
+input[type=submit]:hover {
+    border: 1px solid var(--barn-red);
 }
 
 #about-us {
